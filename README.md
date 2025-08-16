@@ -38,8 +38,9 @@ Supports **interval-based automatic captures** and **manual one-time captures**,
 ├── css/
 │   └── style.css
 └── js/
-    ├── screenshot-manager.js   # ScreenshotManager class
-    └── custom.js               # Demo / initialization logic
+    ├── screenshot-manager.js        # ScreenshotManager class
+    └── custom.js                    # Demo / initialization logic
+    └── tizen-screenshot-manager.js  # Tizen-specific implementation (demo)
 ```
 
 ---
@@ -115,6 +116,19 @@ captureOnce(config, id = 'manual')      // Manual one-time capture (no interval)
 **Notes**
 - **Full visible screen** uses current viewport size (`window.innerWidth`, `window.innerHeight`).  
 - For `type: 'section'`, provide `{ x, y, width, height }` in **CSS pixels**.  
+
+---
+
+## 📱 Tizen Support (Demo)
+
+A demo implementation for **Samsung Tizen devices** is included in:
+
+`js/tizen-screenshot-manager.js`
+
+- Uses `b2bapis.b2bcontrol.captureScreen(onSuccess, onError)`.
+- Only **full-screen screenshots** are supported (no section captures).
+- Returns a **file path** instead of a Blob.
+- Can be customized further based on requirements.
 
 ---
 
