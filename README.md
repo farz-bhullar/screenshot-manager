@@ -3,6 +3,8 @@
 A lightweight JavaScript utility to capture screenshots of the **visible screen (viewport)** or specific **rectangles (x, y, width, height)**.  
 Supports **interval-based automatic captures** and **manual one-time captures**, with **success & error callbacks**.
 
+👉 **[Live Preview](https://farz-bhullar.github.io/screenshot-manager/)**  
+
 ---
 
 ## ✨ Features
